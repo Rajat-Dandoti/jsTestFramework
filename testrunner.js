@@ -1,5 +1,7 @@
-const Mocha = require('mocha');
-const mochawesome = require('mochawesome');
+import Mocha from 'mocha';
+import mochawesome from 'mochawesome';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 const mocha = new Mocha({
   reporter: 'mochawesome',
